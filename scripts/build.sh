@@ -1,2 +1,2 @@
 echo -e "Shit is done"
-return 0
+exit 0
