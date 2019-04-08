@@ -1,3 +1,3 @@
-echo -e "Custom message is here"
+echo "Custom message is here"
 
 return 0
