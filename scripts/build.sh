@@ -1,3 +1,3 @@
 echo -e "Custom message is here"
 
-mvn install
+return 0
