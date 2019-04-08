@@ -1,3 +1,3 @@
-echo -e "Build started!"
+echo -e "Custom message is here"
 
-mvn clean install
+mvn install
