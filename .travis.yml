@@ -1,6 +1,4 @@
 language: java
 script:
-   - echo -e "\nBuilding project...\n"
-   - mvn install
-   - echo -e "\nDeploying...\n"
    - scripts/build.sh
+   - scripts/javadoc.sh
