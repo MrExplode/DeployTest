@@ -25,8 +25,13 @@ git config --global user.email "sunstorm@outlook.hu"
 # Cloning webpage
 git clone --branch=master https://${GITHUB_TOKEN}@github.com/MrExplode/MrExplode.github.io website
 
+# seek into target folder
 cd website
-git rm -rf ./projects/$PROJECT_NAME/javadoc
+cd $HOME/target
+ls
+cd $HOME/website
+# continue
+git rm -rf /projects/$PROJECT_NAME/javadoc
 cp -Rf $HOME/target/apidocs /projects/$PROJECT_NAME/javadoc
 git add -f .
 git commit -m "Latest JavaDoc for $PROJECT_NAME #$TRAVIS_BUILD_NUMBER
