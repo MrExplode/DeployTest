@@ -37,7 +37,7 @@ cd website
 # Tricky but the base solution I started with (https://benlimmer.com/2013/12/26/automatically-publish-javadoc-to-gh-pages-with-travis-ci/)
 # just removes everything FROM INDEX, but we only want to replace the changed in the INDEX
 rm -rf projects/$PROJECT_NAME/javadoc
-mkdir projects/$PROJECT_NAME/javadoc
+mkdir -p projects/$PROJECT_NAME/javadoc
 cp -Rf $PROJECT_HOME/target/apidocs projects/$PROJECT_NAME/javadoc
 git add -f .
 git commit -m "Latest JavaDoc for $PROJECT_NAME #$TRAVIS_BUILD_NUMBER
