@@ -38,6 +38,7 @@ git rm -rf projects/$PROJECT_NAME/javadoc
 cp -Rf $PROJECT_HOME/target/apidocs projects/$PROJECT_NAME/javadoc
 git add -f .
 git commit -m "Latest JavaDoc for $PROJECT_NAME #$TRAVIS_BUILD_NUMBER
+\n
 Latest JavaDoc on a successful Travis CI build, pushed automatically"
 echo -e "\e[93mPushing JavaDoc to webpage"
 git push -fq origin master
