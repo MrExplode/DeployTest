@@ -37,7 +37,11 @@ Latest JavaDoc on a successful Travis CI build, pushed automatically"
 echo -e "\e[93mPushing JavaDoc to webpage"
 git push -fq origin master
 ls -d $HOME
+echo "2:"
+ls $HOME
 echo "list for target"
-ls -d $HOME/target/*
+ls -d $HOME/target
+echo "2:"
+ls $HOME/target
 
 exit 0
