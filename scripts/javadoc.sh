@@ -21,8 +21,8 @@ fold_end doc
 
 # Setting up git
 cd $HOME
-git config --local user.name "ExplodeBot"
-git config --local user.email "sunstorm@outlook.hu"
+git config --global user.name "ExplodeBot"
+git config --global user.email "sunstorm@outlook.hu"
 
 # Cloning webpage
 git clone --branch=master https://${GITHUB_TOKEN}@github.com/MrExplode/MrExplode.github.io website
@@ -36,5 +36,8 @@ git commit -m "Latest JavaDoc for $PROJECT_NAME #$TRAVIS_BUILD_NUMBER
 Latest JavaDoc on a successful Travis CI build, pushed automatically"
 echo -e "\e[93mPushing JavaDoc to webpage"
 git push -fq origin master
+ls -d $HOME
+echo "list for target"
+ls -d $HOME/target/*
 
 exit 0
