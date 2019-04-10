@@ -11,8 +11,8 @@ fold_end() {
 # Configuration
 
 PROJECT_NAME="DeployTest"
-PROJECT_AUTHOR="MrExplode"
-PROJECT_HOME=$HOME/build/$PROJECT_AUTHOR/$PROJECT_NAME
+PROJECT_OWNER="MrExplode"
+PROJECT_HOME=$HOME/build/$PROJECT_OWNER/$PROJECT_NAME
 ###################################
 
 ###################################
@@ -34,6 +34,7 @@ git clone --branch=master https://${GITHUB_TOKEN}@github.com/MrExplode/MrExplode
 
 # removing old build, copying new one then commit and push
 cd website
+mkdir -p projects/$PROJECT_NAME
 rm projects/$PROJECT_NAME/*.jar
 cp $PROJECT_HOME/target/*.jar projects/$PROJECT_NAME
 git add -f .

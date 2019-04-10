@@ -11,8 +11,8 @@ fold_end() {
 # Configuration
 
 PROJECT_NAME="DeployTest"
-PROJECT_AUTHOR="MrExplode"
-PROJECT_HOME=$HOME/build/$PROJECT_AUTHOR/$PROJECT_NAME
+PROJECT_OWNER="MrExplode"
+PROJECT_HOME=$HOME/build/$PROJECT_OWNER/$PROJECT_NAME
 ###################################
 
 ###################################
