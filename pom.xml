@@ -6,6 +6,12 @@
   <name>DeployTest</name>
   <description>Testing automatic deploy tests with Travis</description>
   
+  <properties>
+  	<!-- maven bugfix -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
   <dependencies>
   	<dependency>
   		<groupId>org.fusesource.jansi</groupId>
@@ -16,6 +22,24 @@
   
   <build>
   	<plugins>
+  		<!-- Export -->
+  		<plugin>
+  			<groupId>io.github.mrexplode</groupId>
+  			<artifactId>propertyexporter-maven-plugin</artifactId>
+  			<version>0.0.1</version>
+  			<configuration>
+  				<propList>
+  					<param>${project.build.finalName}</param>
+  					<param>${project.description}</param>
+  					<param>${project.build.directory}</param>
+  				</propList>
+  				<file>${project.build.directory}/info.txt</file>
+  				<separator>;</separator>
+  			</configuration>
+  			<executions><execution><goals><goal>export</goal></goals></execution></executions>
+  		</plugin>
+  		
+  		<!-- Shade -->
   		<plugin>
     		<groupId>org.apache.maven.plugins</groupId>
     		<artifactId>maven-shade-plugin</artifactId>
