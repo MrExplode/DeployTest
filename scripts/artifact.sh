@@ -37,6 +37,7 @@ cd website
 mkdir -p projects/$PROJECT_NAME
 rm projects/$PROJECT_NAME/*.jar
 cp $PROJECT_HOME/target/*.jar projects/$PROJECT_NAME
+python $PROJECT_HOME/scripts/project_list.py $PROJECT_HOME/target/info.txt projects/project-list.yml
 git add -f .
 git commit -m "Latest Artifact for $PROJECT_NAME #$TRAVIS_BUILD_NUMBER
 

@@ -10,8 +10,17 @@
   	<!-- maven bugfix -->
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-	<build>30</build>
+	<build>31</build>
   </properties>
+  
+  <repositories>
+  	<repository>
+  		<id>mvn-repo</id>
+  		<url>https://raw.githubusercontent.com/MrExplode/PropertyExporter/master/mvn-repo/</url>
+  		<releases><enabled>true</enabled></releases>
+  		<snapshots><enabled>true</enabled></snapshots>
+  	</repository>
+  </repositories>
   
   <dependencies>
   	<dependency>
@@ -27,12 +36,12 @@
   		<plugin>
   			<groupId>io.github.mrexplode</groupId>
   			<artifactId>propertyexporter-maven-plugin</artifactId>
-  			<version>0.0.1</version>
+  			<version>1.0.1</version>
   			<configuration>
   				<propList>
-  					<param>${project.build.finalName}</param>
+  					<param>${project.name}</param>
   					<param>${project.description}</param>
-  					<param>${project.build.directory}</param>
+  					<param>${project.build.finalName}.jar</param>
   				</propList>
   				<file>${project.build.directory}/info.txt</file>
   				<separator>;</separator>
