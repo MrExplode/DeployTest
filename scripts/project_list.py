@@ -36,3 +36,4 @@ listFile.close()
 with open(sys.argv[2], "w") as listFile:
 	for project in textList:
 		listFile.write(project)
+		listFile.write("\n")
