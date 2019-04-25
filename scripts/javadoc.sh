@@ -19,7 +19,7 @@ PROJECT_HOME=$HOME/build/$PROJECT_OWNER/$PROJECT_NAME
 # Beginning of the script
 ###################################
 
-# Building the javadoc
+# Building the project
 fold_start doc "Building JavaDoc"
 mvn javadoc:javadoc
 fold_end doc
@@ -38,12 +38,12 @@ cd website
 # just removes everything FROM INDEX, but we only want to replace the changed in the INDEX
 rm -rf projects/$PROJECT_NAME/apidocs
 mkdir -p projects/$PROJECT_NAME/apidocs
-cp -Rf $PROJECT_HOME/target/apidocs projects/$PROJECT_NAME
+cp -Rf $PROJECT_HOME/target/site/apidocs projects/$PROJECT_NAME
 git add -f .
 git commit -m "Latest JavaDoc for $PROJECT_NAME #$TRAVIS_BUILD_NUMBER
 
 Latest JavaDoc on a successful Travis CI build, pushed automatically"
-echo -e "\e[93mPushing JavaDoc to webpage"
+echo -e "\e[93mPushing JavaDoc to webpage..."
 git push -fq origin master
 
 exit 0

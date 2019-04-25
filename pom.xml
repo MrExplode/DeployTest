@@ -13,15 +13,6 @@
 	<build>31</build>
   </properties>
   
-  <repositories>
-  	<repository>
-  		<id>mvn-repo</id>
-  		<url>https://raw.githubusercontent.com/MrExplode/PropertyExporter/master/mvn-repo/</url>
-  		<releases><enabled>true</enabled></releases>
-  		<snapshots><enabled>true</enabled></snapshots>
-  	</repository>
-  </repositories>
-  
   <dependencies>
   	<dependency>
   		<groupId>org.fusesource.jansi</groupId>
@@ -36,7 +27,7 @@
   		<plugin>
   			<groupId>io.github.mrexplode</groupId>
   			<artifactId>propertyexporter-maven-plugin</artifactId>
-  			<version>1.0.1</version>
+  			<version>1.0.0</version>
   			<configuration>
   				<propList>
   					<param>${project.name}</param>
@@ -64,15 +55,4 @@
 		</plugin>
   	</plugins>
   </build>
-  
-   <reporting>
-  	<outputDirectory>${project.build.directory}</outputDirectory>
-  	<plugins>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-        	<artifactId>maven-javadoc-plugin</artifactId>
-        	<version>3.1.0</version>
-  		</plugin>
-  	</plugins>
-  </reporting>
 </project>

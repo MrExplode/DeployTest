@@ -19,7 +19,7 @@ PROJECT_HOME=$HOME/build/$PROJECT_OWNER/$PROJECT_NAME
 # Beginning of the script
 ###################################
 
-# Building the javadoc
+# Building the project
 fold_start install "Building artifact"
 mvn install
 fold_end install
@@ -42,7 +42,7 @@ git add -f .
 git commit -m "Latest Artifact for $PROJECT_NAME #$TRAVIS_BUILD_NUMBER
 
 Latest Artifact on a successful Travis CI build, pushed automatically"
-echo -e "\e[93mPushing JavaDoc to webpage"
+echo -e "\e[93mPushing Artifact to webpage..."
 git push -fq origin master
 
 #cleaning up
