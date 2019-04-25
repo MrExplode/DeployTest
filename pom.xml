@@ -27,7 +27,7 @@
   		<plugin>
   			<groupId>io.github.mrexplode</groupId>
   			<artifactId>propertyexporter-maven-plugin</artifactId>
-  			<version>1.0.0</version>
+  			<version>1.0.1</version>
   			<configuration>
   				<propList>
   					<param>${project.name}</param>
