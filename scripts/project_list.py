@@ -3,7 +3,7 @@ import sys
 print("== Python project list manager ==")
 #the build info file
 infoFile = open(sys.argv[1], "r")
-projectInfo = infoFile.readLine()
+projectInfo = infoFile.readline()
 infoFile.close()
 projectName = projectInfo.split(";")[0]
 #the webiste projectlist file
