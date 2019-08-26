@@ -1,4 +1,5 @@
 #DeployTest
+#used in: PartyMix FileNameCorrector FileMirror PropertyExporter
 language: java
 before_script:
    - sudo add-apt-repository --yes ppa:deadsnakes/ppa
